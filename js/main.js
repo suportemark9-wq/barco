@@ -223,3 +223,13 @@ socket.on('game_state_reset', () => {
     currentAcceptedUsers = 0;
     initialMusicStarted = false;
 });
+
+// Configuração inicial para o main.js - ESTE BLOCO DEVE VIR ANTES DE 'js/main.js'
+const ASSET_PATHS = {
+    mainImage: 'assets/image.png',
+    randomMusics: ['assets/aleatorio1.mp3', 'assets/aleatorio2.mp3', 'assets/aleatorio3.mp3'],
+    boatVideo: 'assets/barco.mp4',
+    boatMusic: 'assets/barco.mp3',
+    barco1Video: 'assets/barco1.mp4', // <--- ALTERADO AQUI para minúsculas
+};
+const TOTAL_USERS_EXPECTED = 5; // Adicionado: Para usar no reset/contagem
