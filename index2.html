@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queime seu Barco - Index 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="index-container">
+        <!-- Etapa 1: Inserir Mensagens -->
+        <div id="input-step" class="step active">
+            <h2>Queime seu Barco, Index 1</h2>
+            <div class="input-group">
+                <label for="medos">1. Coloque todos os seus medos no barco:</label>
+                <textarea id="medos" rows="4"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="habitos">2. Coloque todos os seus maus hábitos dentro do barco:</label>
+                <textarea id="habitos" rows="4"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="atrapalha">3. O que atrapalha seu fechamento:</label>
+                <textarea id="atrapalha" rows="4" class="green-border"></textarea>
+            </div>
+            <button id="burn-button">Queimar o barco</button>
+        </div>
+
+        <!-- Mensagens de Erro/Confirmação -->
+        <div id="error-overlay" class="overlay">
+            <div class="message-box">
+                <h3 id="error-title">ERRO AO CONTINUAR</h3>
+                <p id="error-message">Se você continuar pode ser que você não dê conta, ficará mais vergonhoso se tiver que retroceder</p>
+                <div class="button-group">
+                    <button id="continue-button-1">Continuar</button>
+                    <button id="exit-button-1">Sair</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-overlay-2" class="overlay">
+            <div class="message-box">
+                <h3 id="error-title-2">ERRO AO CONTINUAR</h3>
+                <p id="error-message-2">Você pode até fingir que quer desistir de tudo isso, mas eu vou te buscar e sei que você vai ceder, então vamos evitar o trabalho e peço que você desista agora!</p>
+                <div class="button-group">
+                    <button id="continue-button-2">Continuar</button>
+                    <button id="exit-button-2">Sair</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Etapa de "Barco Queimado" -->
+        <div id="burned-boat-step" class="step">
+            <p>BARCO QUEIMADO!</p>
+        </div>
+
+        <!-- Etapa de "Você foi escolhido" -->
+        <div id="chosen-step" class="step">
+            <p>Você foi escolhido!</p>
+        </div>
+
+        <!-- Etapa de "Revelação de Identidade" -->
+        <div id="reveal-step" class="step">
+            <img id="reveal-image" src="" alt="Símbolo">
+            <p id="reveal-text"></p>
+            <button id="accept-team-button">ACEITAR EQUIPE</button>
+        </div>
+    </div>
+
+    <!-- ALTERADO AQUI: Removidos 'integrity' e 'crossorigin' -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        // Configuração específica para este index - ESTE BLOCO DEVE VIR ANTES DE 'js/indexPage.js'
+        const USER_ID = 'index2'; // MUDAR ISSO PARA CADA INDEX
+        const REVEAL_ASSETS = {
+            image: 'assets/wolf.png', // MUDAR ISSO PARA CADA INDEX
+            text: 'O Leão, rei da selva, simboliza liderança, força e coragem. Sua presença impõe respeito e seu rugido ecoa a determinação. Você é o líder nato, o protetor do seu bando.', // MUDAR ISSO PARA CADA INDEX
+            video: 'assets/wolf.mp4'
+        };
+    </script>
+    <script src="js/indexPage.js"></script>
+</body>
+</html>

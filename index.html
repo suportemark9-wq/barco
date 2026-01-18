@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Principal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Tela Inicial -->
+        <div id="initial-screen" class="screen active">
+            <img src="assets/image.png" alt="Tela Inicial" id="main-image">
+            <p class="instruction">Pressione 'E' para expandir, 'I' para próxima etapa...</p>
+        </div>
+
+        <!-- Tela do Barco (Vídeo em loop) -->
+        <div id="boat-screen" class="screen">
+            <video id="boat-video" src="assets/barco.mp4" loop muted autoplay></video>
+            <audio id="boat-music" src="assets/barco.mp3" loop></audio>
+
+            <div id="barco1-overlay" class="overlay">
+                <video id="barco1-video" src="assets/Barco1.mp4" muted></video>
+            </div>
+
+            <!-- Overlay para as mensagens finais dos barcos queimados -->
+            <div id="final-messages-overlay" class="overlay">
+                <h2>Mensagens dos Barcos Queimados:</h2>
+                <ul id="message-list"></ul>
+            </div>
+
+            <!-- NOVO: Overlay para a tela "Próxima equipe" -->
+            <div id="next-team-overlay" class="screen">
+                <h2>Próxima equipe</h2>
+            </div>
+
+            <!-- Overlay para os vídeos de revelação do usuário -->
+            <div id="user-reveal-overlay" class="screen">
+                <video id="user-reveal-video" muted autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Áudios aleatórios para a tela inicial -->
+    <audio id="music-player" loop></audio>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        // Configuração inicial para o main.js - ESTE BLOCO DEVE VIR ANTES DE 'js/main.js'
+        const ASSET_PATHS = {
+            mainImage: 'assets/image.png',
+            randomMusics: ['assets/aleatorio1.mp3', 'assets/aleatorio2.mp3', 'assets/aleatorio3.mp3'],
+            boatVideo: 'assets/barco.mp4',
+            boatMusic: 'assets/barco.mp3',
+            barco1Video: 'assets/Barco1.mp4',
+        };
+        const TOTAL_USERS_EXPECTED = 5; // Adicionado: Para usar no reset/contagem
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
