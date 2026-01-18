@@ -230,7 +230,7 @@ const ASSET_PATHS = {
     randomMusics: ['assets/aleatorio1.mp3', 'assets/aleatorio2.mp3', 'assets/aleatorio3.mp3'],
     boatVideo: 'assets/barco.mp4',
     boatMusic: 'assets/barco.mp3',
-    barco1Video: 'assets/barco1.mp4', // <--- ALTERADO AQUI para minúsculas
+    barco1Video: 'assets/barco_intro.mp4', // <--- ALTERADO AQUI para minúsculas
 };
 const TOTAL_USERS_EXPECTED = 5; // Adicionado: Para usar no reset/contagem
 // Este é um comentario para forcar um novo deploy no Render
