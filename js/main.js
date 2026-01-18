@@ -1,4 +1,4 @@
-const socket = io(); // Conecta ao servidor Socket.IO
+const socket = io('https://barco-app.onrender.com/'); // Conecta ao servidor Socket.IO
 
 const initialScreen = document.getElementById('initial-screen');
 const boatScreen = document.getElementById('boat-screen');

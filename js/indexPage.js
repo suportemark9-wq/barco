@@ -1,4 +1,4 @@
-const socket = io(); // Conecta ao servidor Socket.IO
+const socket = io('https://barco-app.onrender.com/'); // Conecta ao servidor Socket.IO
 
 const inputStep = document.getElementById('input-step');
 const burnedBoatStep = document.getElementById('burned-boat-step');
