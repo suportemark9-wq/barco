@@ -32,7 +32,9 @@ let initialMusicStarted = false; // Flag para garantir que a música inicial só
 
 // Função para tocar a próxima música aleatória
 function playNextRandomMusic() {
-    if (ASSET_PATHS.randomMusics.length === 0) return;
+    // ATENÇÃO: Se 'ASSET_PATHS' for undefined aqui, o problema está no carregamento do index.html ou na sua definição.
+    // É CRÍTICO que ASSET_PATHS seja definido NO SEU index.html ANTES de carregar main.js
+    if (typeof ASSET_PATHS === 'undefined' || ASSET_PATHS.randomMusics.length === 0) return;
 
     musicPlayer.src = ASSET_PATHS.randomMusics[currentMusicIndex];
     musicPlayer.load(); // Recarrega o áudio
