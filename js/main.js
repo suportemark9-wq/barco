@@ -233,3 +233,4 @@ const ASSET_PATHS = {
     barco1Video: 'assets/barco1.mp4', // <--- ALTERADO AQUI para minúsculas
 };
 const TOTAL_USERS_EXPECTED = 5; // Adicionado: Para usar no reset/contagem
+// Este é um comentario para forcar um novo deploy no Render
